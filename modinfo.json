@@ -64,7 +64,7 @@
         "buff_duration": 4,
         "max_stacks": 2,
         "bonus_dodges": 3,
-        "falt_bonuses": [
+        "flat_bonuses": [
           { "stat": "dodge", "scaling-stat": "dex", "scale": 0.25 }
         ]
       }
