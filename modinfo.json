@@ -1,7 +1,7 @@
 [
   {
     "type": "MOD_INFO",
-    "id": "centimart",
+    "id": "martial_panthera",
     "name": "관통 연타 무술",
     "authors": [ "Morang" ],
     "description": "관통 연타 무술 추가.",
@@ -10,7 +10,7 @@
   },
   {
     "type": "martial_art",
-    "id": "style_centipede_a",
+    "id": "style_panthera",
     "name": { "str": "눈표범의 형상" },
     "description": "세상과 떨어져있는 마을 대대로 전해져 내려오던 전통 무술입니다.  눈표범의 형상은 재빠른 연타로 적을 무너뜨리는데 집중합니다.  매 공격 적중 시마다 속도가 빨라집니다.",
     "initiate": [ "자세를 낮추고 적에게 달려들 기세를 취합니다.", "%s(이)가 자세를 낮춥니다." ],
@@ -19,7 +19,7 @@
     "strictly_melee": true,
     "static_buffs": [
       {
-        "id": "buff_centipede_static",
+        "id": "buff_panthera_static",
         "name": "사냥꾼의 노련함",
         "description": "민첩성의 25%만큼 관통 피해와 방어력 관통이 증가합니다.",
         "melee_allowed": true,
@@ -33,7 +33,7 @@
     ],
     "onhit_buffs": [
       {
-        "id": "buff_centipede_onhit_a",
+        "id": "buff_panthera_onhit",
         "name": "눈표범의 분노",
         "description": "당신이 쉬지않고 적을 공격하면 할수록 당신의 손과 발이 빨라져 보이지 않게 됩니다.\n\n행동력 소모 -4\n4턴 간 지속.  5회 중첩",
         "skill_requirements": [ { "name": "melee", "level": 5 } ],
@@ -45,9 +45,9 @@
     ],
     "oncrit_buffs": [
       {
-        "id": "buff_centipede_oncrit_a",
-        "name": "눈표범의 이빨",
-        "description": "눈표범의 이빨은 약점을 드러낸 적에게 치명적인 피해를 입힙니다.\n\n피해 +15%, 관통피해 관통력 +5\n2턴 간 지속.  2회 중첩",
+        "id": "buff_panthera_oncrit",
+        "name": "약자멸시",
+        "description": "약점을 드러낸 적에게 치명적인 피해를 입힙니다.\n\n피해 +15%, 관통피해 관통력 +5\n2턴 간 지속.  2회 중첩",
         "skill_requirements": [ { "name": "melee", "level": 1 } ],
         "melee_allowed": true,
         "buff_duration": 2,
@@ -64,7 +64,7 @@
     ],
     "onkill_buffs": [
       {
-        "id": "buff_centipede_kill",
+        "id": "buff_panthera_kill",
         "name": "포식",
         "description": "적을 죽이고 나면 재정비할 시간을 얻습니다.\n민첩성의 25%만큼 회피 기술 증가, 회피 시도 +3 \n4턴간 지속 2회 중첩",
         "melee_allowed": true,
@@ -76,7 +76,7 @@
         ]
       }
     ],
-    "techniques": [ "tec_centipede_rapid_a", "tec_centipede_break_a", "tec_centipede_bite_a", "tec_centipede_disarm_a", "centi_vorpal" ],
+    "techniques": [ "tec_panthera_rapid", "tec_panthera_break", "tec_panthera_bite", "tec_panthera_disarm", "tec_panthera_vorpal" ],
     "weapon_category": [ "KNIVES", "SHORT_SWORDS", "SHIVS" ],
     "weapons": [
       "moonstone_fang",
@@ -85,7 +85,7 @@
   },
   {
     "type": "technique",
-    "id": "tec_centipede_break_a",
+    "id": "tec_panthera_break",
     "name": "Grab Break",
     "messages": [ "The %s tries to grab you, but you skitter free!", "The %s tries to grab <npcname>, but they skitter free!" ],
     "skill_requirements": [ { "name": "melee", "level": 3 } ],
@@ -95,7 +95,7 @@
   },
   {
     "type": "technique",
-    "id": "tec_centipede_rapid_a",
+    "id": "tec_panthera_rapid",
     "name": "눈표범의 ",
     "messages": [ "You swiftly hit %s", "<npcname> swiftly hits %s" ],
     "melee_allowed": true,
@@ -108,8 +108,8 @@
   },
   {
     "type": "technique",
-    "id": "tec_centipede_bite_a",
-    "name": "약자멸시",
+    "id": "tec_panthera_bite",
+    "name": "눈표범의 이빨",
     "messages": [ "%s(을)를 공격해 쓰러뜨립니다", "<npcname>(이)가 %s(을)를 공격해 쓰러뜨립니다" ],
     "skill_requirements": [ { "name": "melee", "level": 2 } ],
     "melee_allowed": true,
@@ -119,7 +119,7 @@
   },
   {
     "type": "technique",
-    "id": "tec_centipede_disarm_a",
+    "id": "tec_panthera_disarm",
     "name": "Disarm",
     "messages": [ "You disarm %s with lightning speed", "<npcname> disarms %s with lightning speed" ],
     "skill_requirements": [ { "name": "melee", "level": 4 } ],
@@ -128,7 +128,7 @@
   },
   {
     "type": "technique",
-    "id": "centi_vorpal",
+    "id": "tec_panthera_vorpal",
     "name": "숨통 끊기",
     "melee_allowed": true,
     "mult_bonuses": [ { "stat": "damage", "type": "stab", "scale": 5 } ],
