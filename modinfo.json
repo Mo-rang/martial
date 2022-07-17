@@ -68,7 +68,7 @@
           { "stat": "dodge", "scaling-stat": "dex", "scale": 0.25 }
         ]
       }
-    ]
+    ],
     "techniques": [ "tec_centipede_rapid", "tec_centipede_break", "tec_centipede_bite", "tec_centipede_disarm", "centi_vorpal" ],
     "weapon_category": [ "KNIVES", "SHORT_SWORDS", "SHIVS" ],
     "weapons": [
