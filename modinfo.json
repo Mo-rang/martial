@@ -119,7 +119,7 @@
     "melee_allowed": true,
     "messages": [ "%s(을)를 공격해 쓰러뜨립니다", "<npcname>(이)가 %s(을)를 공격해 쓰러뜨립니다" ],
     "skill_requirements": [ { "name": "melee", "level": 2 } ],
-    "crit_tec": true,
+  disarms"ok": true,
     "weighting": 1,
     "down_dur": 2,
     "mult_bonuses": [ { "stat": "movecost", "scale": 0.5 } ],
@@ -143,7 +143,7 @@
     "flat_bonuses": [ { "stat": "arpen", "type": "stab", "scale": 1000 } ],
     "crit_tec": true,
     "skill_requirements": [ { "name": "stabbing", "level": 7 } ],
-    "weighting": -5,
+    "weighting": -3,
     "downed_target": true,
     "stunned_target": true,
     "messages": [
