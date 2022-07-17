@@ -1,0 +1,9 @@
+[
+  {
+    "id": "manual_panthera",
+    "copy-from": "book_martial",
+    "looks_like": "manual_eskrima",
+    "type": "BOOK",
+    "name": { "str_sp": "눈표범의 전설" },
+    "description": "이 책에는 잊혀진 무술에 대한 내용이 담겨 있습니다.",
+    "martial_art": "style_panthera"
