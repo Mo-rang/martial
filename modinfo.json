@@ -44,7 +44,7 @@
       {
         "id": "buff_panthera_oncrit",
         "name": "약자멸시",
-        "description": "약점을 드러낸 적에게 치명적인 피해를 입힙니다.\n\n피해 +15%, 관통피해 관통력 +5\n3턴 간 지속.  4회 중첩",
+        "description": "약점을 드러낸 적에게 치명적인 피해를 입힙니다.\n\n피해 +20%, 관통피해 관통력 +5\n3턴 간 지속.  4회 중첩",
         "skill_requirements": [ { "name": "melee", "level": 1 } ],
         "melee_allowed": true,
         "buff_duration": 3,
