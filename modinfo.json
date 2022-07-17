@@ -21,10 +21,11 @@
       {
         "id": "buff_panthera_static",
         "name": "사냥꾼의 노련함",
-        "description": "민첩성의 75%만큼 관통 피해가 증가합니다.",
+        "description": "민첩성의 75%만큼 관통 피해와 방어 관통력이 증가합니다.",
         "melee_allowed": true,
         "flat_bonuses": [
-          { "stat": "damage", "type": "stab", "scaling-stat": "dex", "scale": 0.75 }
+          { "stat": "damage", "type": "stab", "scaling-stat": "dex", "scale": 0.75 },
+          { "stat": "arpen", "type": "stab", "scaling-stat": "dex", "scale": 0.75 }
         ]
       }
     ],
@@ -98,7 +99,8 @@
       { "stat": "damage", "type": "bash", "scale": 0.66 },
       { "stat": "damage", "type": "cut", "scale": 0.66 },
       { "stat": "damage", "type": "stab", "scale": 0.66 }
-    ]
+    ],
+    "attack_vectors": [ "WEAPON" ]
   },
   {
     "type": "technique",
@@ -110,7 +112,8 @@
     "crit_tec": true,
     "weighting": 1,
     "down_dur": 1,
-    "mult_bonuses": [ { "stat": "movecost", "scale": 0.5 } ]
+    "mult_bonuses": [ { "stat": "movecost", "scale": 0.5 } ],
+    "attack_vectors": [ "WEAPON" ]
   },
   {
     "type": "technique",
@@ -127,9 +130,11 @@
     "name": "숨통 끊기",
     "melee_allowed": true,
     "mult_bonuses": [ { "stat": "damage", "type": "stab", "scale": 5 } ],
+    "flat_bonuses": [ { "stat": "arpen", "type": "stab", "scale": 1000 } ],
     "crit_tec": true,
     "skill_requirements": [ { "name": "stabbing", "level": 7 } ],
-    "weighting": -5,
+    "weighting": -30,
+    "downed_target": true,
     "messages": [
       "푹 ! !  %s의 급소에 칼날을 깊게 박아넣습니다.",
       "푹 ! !  <npcname>(이)가 %s의 급소에 칼날을 깊게 박아넣습니다."
