@@ -7,3 +7,27 @@
     "name": { "str_sp": "눈표범의 전설" },
     "description": "이 책에는 잊혀진 무술에 대한 내용이 담겨 있습니다.",
     "martial_art": "style_panthera"
+  },
+  {
+    "id": "rare_martial_arts_books",
+    "type": "item_group",
+    "//": "This group may be a bit overpopulated by MMA, but it seemed the most appropriate place for all of these",
+    "copy-from": "rare_martial_arts_books",
+    "extend": {
+      "items": [
+        [ "manual_panthera", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "mansion_books",
+    "//": "Sublime Way seem to be like books that rich people would be more likely to collect than the others, although still very rare",
+    "copy-from": "mansion_books",
+    "extend": {
+      "items": [
+       [ "manual_panthera", 1 ]
+      ]
+    }
+  }
+]
