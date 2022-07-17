@@ -55,7 +55,7 @@
         ]
       }
     ],
-    "onkill_buffs: [
+    "onkill_buffs": [
       {
         "id": "buff_centipede_kill",
         "name": "먹잇감 섭취",
