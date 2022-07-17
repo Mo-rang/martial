@@ -119,7 +119,7 @@
     "melee_allowed": true,
     "messages": [ "%s(을)를 공격해 쓰러뜨립니다", "<npcname>(이)가 %s(을)를 공격해 쓰러뜨립니다" ],
     "skill_requirements": [ { "name": "melee", "level": 2 } ],
-  disarms"ok": true,
+    "crit_ok": true,
     "weighting": 1,
     "down_dur": 2,
     "mult_bonuses": [ { "stat": "movecost", "scale": 0.5 } ],
