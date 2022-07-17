@@ -21,7 +21,7 @@
       {
         "id": "buff_centipede_static",
         "name": "지네의 노련함",
-        "description": "민첩성의 25%만큼 관통 피해가 ",
+        "description": "민첩성의 25%만큼 관통 피해가 상승합니다.",
         "melee_allowed": true,
         "flat_bonuses": [
           { "stat": "damage", "type": "stab", "scaling-stat": "dex", "scale": 0.25 }
@@ -44,7 +44,7 @@
       {
         "id": "buff_centipede_oncrit",
         "name": "지네의 맹독",
-        "description": "Y지네의 맹독은 적을 끔찍하게 불태웁니다.\n\n피해 +15%\n2턴 간 지속",
+        "description": "지네의 맹독은 적을 끔찍하게 불태웁니다.\n\n피해 +15%\n2턴 간 지속",
         "skill_requirements": [ { "name": "melee", "level": 1 } ],
         "melee_allowed": true,
         "buff_duration": 2,
@@ -55,7 +55,26 @@
         ]
       }
     ],
-    "techniques": [ "tec_centipede_rapid", "tec_centipede_break", "tec_centipede_bite", "tec_centipede_disarm", "centi_vorpal" ]
+    "onkill_buffs: [
+      {
+        "id": "buff_centipede_kill",
+        "name": "먹잇감 섭취",
+        "description": "적을 죽이고 나서 재정비할 시간을 얻습니다.\n민첩성의 25%만큼 회피 기술 증가, 회피 시도 +3 \n4턴간 지속 2회 중첩",
+        "melee_allowed": true,
+        "buff_duration": 4,
+        "max_stacks": 2,
+        "bonus_dodges": 3,
+        "falt_bonuses": [
+          { "stat": "dodge", "scaling-stat": "dex", "scale": 0.25 }
+        ]
+      }
+    ]
+    "techniques": [ "tec_centipede_rapid", "tec_centipede_break", "tec_centipede_bite", "tec_centipede_disarm", "centi_vorpal" ],
+    "weapon_category": [ "KNIVES", "SHORT_SWORDS", "SHIVS" ],
+    "weapons": [
+      "moonstone_fang",
+      "moonstone_fang_on"
+    ]
   },
   {
     "type": "technique",
