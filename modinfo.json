@@ -126,7 +126,6 @@
     "type": "technique",
     "id": "tec_panthera_vorpal",
     "name": "숨통 끊기",
-    "downed_target": true,
     "mult_bonuses": [ { "stat": "damage", "type": "stab", "scale": 5 } ],
     "crit_tec": true,
     "skill_requirements": [ { "name": "stabbing", "level": 7 } ],
