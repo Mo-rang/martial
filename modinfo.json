@@ -2,64 +2,71 @@
   {
     "type": "MOD_INFO",
     "id": "centimart",
-    "name": "지네권 변경",
+    "name": "관통 연타 무술",
     "authors": [ "Morang" ],
-    "description": "지네권 관통 무기로 변경.",
+    "description": "관통 연타 무술 추가.",
     "category": "misc_additions",
-    "dependencies": [ "dda" ] 
+    "dependencies": [ "dda", "Arcana", "MMA" ] 
   },
   {
     "type": "martial_art",
     "id": "style_centipede_a",
-    "name": { "str": "지네의 형상" },
-    "description": "One of the Five Deadly Venoms, used by Zhang Yiaotian.  Centipede Style uses an onslaught of rapid strikes.  Each attack you land increases your attack speed.  Critical hits increase your damage further.",
-    "initiate": [ "가능한 빠른 공격을 할 수 있도록 지네의 자세를 취합니다.", "%s(이)가 지네의 자세를 취합니다." ],
+    "name": { "str": "눈표범의 형상" },
+    "description": "세상과 떨어져있는 마을 대대로 전해져 내려오던 전통 무술입니다.  눈표범의 형상은 재빠른 연타로 적을 무너뜨리는데 집중합니다.  매 공격 적중 시마다 속도가 빨라집니다.",
+    "initiate": [ "자세를 낮추고 적에게 달려들 기세를 취합니다.", "%s(이)가 자세를 낮춥니다." ],
     "learn_difficulty": 10,
     "primary_skill": "stabbing",
     "strictly_melee": true,
     "static_buffs": [
       {
         "id": "buff_centipede_static",
-        "name": "지네의 노련함",
-        "description": "민첩성의 25%만큼 관통 피해가 상승합니다.",
+        "name": "사냥꾼의 노련함",
+        "description": "민첩성의 25%만큼 관통 피해와 방어력 관통이 증가합니다.",
         "melee_allowed": true,
         "flat_bonuses": [
-          { "stat": "damage", "type": "stab", "scaling-stat": "dex", "scale": 0.25 }
+          { "stat": "damage", "type": "stab", "scaling-stat": "dex", "scale": 0.25 },
+          { "stat": "arpen", "type": "bash", "scaling-stat": "dex", "scale": 0.25 },
+          { "stat": "arpen", "type": "cut", "scaling-stat": "dex", "scale": 0.25 },
+          { "stat": "arpen", "type": "stab", "scaling-stat": "dex", "scale": 0.25 }
         ]
       }
     ],
     "onhit_buffs": [
       {
         "id": "buff_centipede_onhit_a",
-        "name": "지네의 분노",
-        "description": "당신이 쉬지않고 적을 공격하면 할수록 당신의 손과 발이 빨라져 보이지 않게 됩니다.\n\n행동력 소모 -4\n3턴 간 지속.  4회 중첩",
+        "name": "눈표범의 분노",
+        "description": "당신이 쉬지않고 적을 공격하면 할수록 당신의 손과 발이 빨라져 보이지 않게 됩니다.\n\n행동력 소모 -4\n4턴 간 지속.  5회 중첩",
         "skill_requirements": [ { "name": "melee", "level": 5 } ],
         "melee_allowed": true,
-        "buff_duration": 3,
-        "max_stacks": 4,
+        "buff_duration": 4,
+        "max_stacks": 5,
         "flat_bonuses": [ { "stat": "movecost", "scale": -4.0 } ]
       }
     ],
     "oncrit_buffs": [
       {
         "id": "buff_centipede_oncrit_a",
-        "name": "지네의 맹독",
-        "description": "지네의 맹독은 적을 끔찍하게 불태웁니다.\n\n피해 +15%\n2턴 간 지속",
+        "name": "눈표범의 이빨",
+        "description": "눈표범의 이빨은 약점을 드러낸 적에게 치명적인 피해를 입힙니다.\n\n피해 +15%, 관통피해 관통력 +5\n2턴 간 지속.  2회 중첩",
         "skill_requirements": [ { "name": "melee", "level": 1 } ],
         "melee_allowed": true,
         "buff_duration": 2,
+        "max_stacks": 2,
         "mult_bonuses": [
-          { "stat": "damage", "type": "bash", "scale": 1.15 },
-          { "stat": "damage", "type": "cut", "scale": 1.15 },
-          { "stat": "damage", "type": "stab", "scale": 1.15 }
+          { "stat": "damage", "type": "bash", "scale": 1.2 },
+          { "stat": "damage", "type": "cut", "scale": 1.2 },
+          { "stat": "damage", "type": "stab", "scale": 1.2 }
+        ],
+        "flat_bonuses": [
+          { "stat": "arpen", "type": "stab", "scale": 5.0 }
         ]
       }
     ],
     "onkill_buffs": [
       {
         "id": "buff_centipede_kill",
-        "name": "먹잇감 섭취",
-        "description": "적을 죽이고 나서 재정비할 시간을 얻습니다.\n민첩성의 25%만큼 회피 기술 증가, 회피 시도 +3 \n4턴간 지속 2회 중첩",
+        "name": "포식",
+        "description": "적을 죽이고 나면 재정비할 시간을 얻습니다.\n민첩성의 25%만큼 회피 기술 증가, 회피 시도 +3 \n4턴간 지속 2회 중첩",
         "melee_allowed": true,
         "buff_duration": 4,
         "max_stacks": 2,
@@ -89,7 +96,7 @@
   {
     "type": "technique",
     "id": "tec_centipede_rapid_a",
-    "name": "지네의 공격",
+    "name": "눈표범의 ",
     "messages": [ "You swiftly hit %s", "<npcname> swiftly hits %s" ],
     "melee_allowed": true,
     "mult_bonuses": [
@@ -102,8 +109,8 @@
   {
     "type": "technique",
     "id": "tec_centipede_bite_a",
-    "name": "지네의 이빨",
-    "messages": [ "지네의 이빨로 %s(을)를 공격합니다", "<npcname>(이)가 지네의 이빨로 %s(을)를 공격합니다" ],
+    "name": "약자멸시",
+    "messages": [ "%s(을)를 공격해 쓰러뜨립니다", "<npcname>(이)가 %s(을)를 공격해 쓰러뜨립니다" ],
     "skill_requirements": [ { "name": "melee", "level": 2 } ],
     "melee_allowed": true,
     "crit_tec": true,
@@ -122,17 +129,18 @@
   {
     "type": "technique",
     "id": "centi_vorpal",
-    "name": "즉결 처형",
+    "name": "숨통 끊기",
     "melee_allowed": true,
-    "mult_bonuses": [ { "stat": "damage", "type": "stab", "scale": 99 } ],
+    "mult_bonuses": [ { "stat": "damage", "type": "stab", "scale": 5 } ],
     "crit_tec": true,
     "skill_requirements": [ { "name": "stabbing", "level": 7 } ],
-    "weighting": -100,
+    "weighting": -5,
     "messages": [
       "푹 ! !  %s의 급소에 칼날을 깊게 박아넣습니다.",
       "푹 ! !  <npcname>(이)가 %s의 급소에 칼날을 깊게 박아넣습니다."
     ],
-    "description": "관통 피해가 99배, 치명타 시",
+    "downed_target": true,
+    "description": "관통 피해가 5배, 치명타 시",
     "attack_vectors": [ "WEAPON" ]
   }
 ]
