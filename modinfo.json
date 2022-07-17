@@ -96,7 +96,7 @@
   {
     "type": "technique",
     "id": "tec_panthera_rapid",
-    "name": "눈표범의 ",
+    "name": "눈표범의 발톱",
     "messages": [ "You swiftly hit %s", "<npcname> swiftly hits %s" ],
     "melee_allowed": true,
     "mult_bonuses": [
