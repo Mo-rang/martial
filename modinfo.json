@@ -1,0 +1,120 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "centimart",
+    "name": "지네권 변경",
+    "authors": [ "Morang" ],
+    "description": "지네권 관통 무기로 변경.",
+    "category": "misc_additions",
+    "dependencies": [ "dda" ] 
+  },
+  {
+    "type": "martial_art",
+    "id": "style_centipede",
+    "name": { "str": "지네의 형상" },
+    "description": "One of the Five Deadly Venoms, used by Zhang Yiaotian.  Centipede Style uses an onslaught of rapid strikes.  Each attack you land increases your attack speed.  Critical hits increase your damage further.",
+    "initiate": [ "가능한 빠른 공격을 할 수 있도록 지네의 자세를 취합니다.", "%s(이)가 지네의 자세를 취합니다." ],
+    "learn_difficulty": 10,
+    "primary_skill": "stabbing",
+    "strictly_melee": true,
+    "static_buffs": [
+      {
+        "id": "buff_centipede_static",
+        "name": "지네의 노련함",
+        "description": "민첩성의 25%만큼 관통 피해가 ",
+        "melee_allowed": true,
+        "flat_bonuses": [
+          { "stat": "damage", "type": "stab", "scaling-stat": "dex", "scale": 0.25 }
+        ]
+      }
+    ],
+    "onhit_buffs": [
+      {
+        "id": "buff_centipede_onhit",
+        "name": "지네의 분노",
+        "description": "당신이 쉬지않고 적을 공격하면 할수록 당신의 손과 발이 빨라져 보이지 않게 됩니다.\n\n행동력 소모 -4\n3턴 간 지속.  4회 중첩",
+        "skill_requirements": [ { "name": "melee", "level": 5 } ],
+        "melee_allowed": true,
+        "buff_duration": 3,
+        "max_stacks": 4,
+        "flat_bonuses": [ { "stat": "movecost", "scale": -4.0 } ]
+      }
+    ],
+    "oncrit_buffs": [
+      {
+        "id": "buff_centipede_oncrit",
+        "name": "지네의 맹독",
+        "description": "Y지네의 맹독은 적을 끔찍하게 불태웁니다.\n\n피해 +15%\n2턴 간 지속",
+        "skill_requirements": [ { "name": "melee", "level": 1 } ],
+        "melee_allowed": true,
+        "buff_duration": 2,
+        "mult_bonuses": [
+          { "stat": "damage", "type": "bash", "scale": 1.15 },
+          { "stat": "damage", "type": "cut", "scale": 1.15 },
+          { "stat": "damage", "type": "stab", "scale": 1.15 }
+        ]
+      }
+    ],
+    "techniques": [ "tec_centipede_rapid", "tec_centipede_break", "tec_centipede_bite", "tec_centipede_disarm", "centi_vorpal" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_centipede_break",
+    "name": "Grab Break",
+    "messages": [ "The %s tries to grab you, but you skitter free!", "The %s tries to grab <npcname>, but they skitter free!" ],
+    "skill_requirements": [ { "name": "melee", "level": 3 } ],
+    "melee_allowed": true,
+    "defensive": true,
+    "grab_break": true
+  },
+  {
+    "type": "technique",
+    "id": "tec_centipede_rapid",
+    "name": "지네의 공격",
+    "messages": [ "You swiftly hit %s", "<npcname> swiftly hits %s" ],
+    "melee_allowed": true,
+    "mult_bonuses": [
+      { "stat": "movecost", "scale": 0.5 },
+      { "stat": "damage", "type": "bash", "scale": 0.66 },
+      { "stat": "damage", "type": "cut", "scale": 0.66 },
+      { "stat": "damage", "type": "stab", "scale": 0.66 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_centipede_bite",
+    "name": "지네의 이빨",
+    "messages": [ "지네의 이빨로 %s(을)를 공격합니다", "<npcname>(이)가 지네의 이빨로 %s(을)를 공격합니다" ],
+    "skill_requirements": [ { "name": "melee", "level": 2 } ],
+    "melee_allowed": true,
+    "crit_tec": true,
+    "down_dur": 1,
+    "mult_bonuses": [ { "stat": "movecost", "scale": 0.5 } ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_centipede_disarm",
+    "name": "Disarm",
+    "messages": [ "You disarm %s with lightning speed", "<npcname> disarms %s with lightning speed" ],
+    "skill_requirements": [ { "name": "melee", "level": 4 } ],
+    "melee_allowed": true,
+    "disarms": true
+  },
+  {
+    "type": "technique",
+    "id": "centi_vorpal",
+    "name": "즉결 처형",
+    "melee_allowed": true,
+    "mult_bonuses": [ { "stat": "damage", "type": "stab", "scale": 99 } ],
+    "crit_tec": true,
+    "skill_requirements": [ { "name": "stabbing", "level": 7 } ],
+    "weighting": -100,
+    "messages": [
+      "푹 ! !  %s의 급소에 칼날을 깊게 박아넣습니다.",
+      "푹 ! !  <npcname>(이)가 %s의 급소에 칼날을 깊게 박아넣습니다."
+    ],
+    "description": "관통 피해가 99배, 치명타 시",
+    "attack_vectors": [ "WEAPON" ]
+  }
+]
+  
