@@ -93,6 +93,7 @@
     "id": "tec_panthera_rapid",
     "name": "눈표범의 발톱",
     "messages": [ "You swiftly hit %s", "<npcname> swiftly hits %s" ],
+    "weighting": 1,
     "crit_ok" : true,
     "mult_bonuses": [
       { "stat": "movecost", "scale": 0.5 },
@@ -108,6 +109,7 @@
     "messages": [ "%s(을)를 공격해 쓰러뜨립니다", "<npcname>(이)가 %s(을)를 공격해 쓰러뜨립니다" ],
     "skill_requirements": [ { "name": "melee", "level": 2 } ],
     "crit_tec": true,
+    "weighting": 1,
     "down_dur": 1,
     "mult_bonuses": [ { "stat": "movecost", "scale": 0.5 } ]
   },
