@@ -10,7 +10,7 @@
   },
   {
     "type": "martial_art",
-    "id": "style_centipede",
+    "id": "style_centipede_a",
     "name": { "str": "지네의 형상" },
     "description": "One of the Five Deadly Venoms, used by Zhang Yiaotian.  Centipede Style uses an onslaught of rapid strikes.  Each attack you land increases your attack speed.  Critical hits increase your damage further.",
     "initiate": [ "가능한 빠른 공격을 할 수 있도록 지네의 자세를 취합니다.", "%s(이)가 지네의 자세를 취합니다." ],
@@ -30,7 +30,7 @@
     ],
     "onhit_buffs": [
       {
-        "id": "buff_centipede_onhit",
+        "id": "buff_centipede_onhit_a",
         "name": "지네의 분노",
         "description": "당신이 쉬지않고 적을 공격하면 할수록 당신의 손과 발이 빨라져 보이지 않게 됩니다.\n\n행동력 소모 -4\n3턴 간 지속.  4회 중첩",
         "skill_requirements": [ { "name": "melee", "level": 5 } ],
@@ -42,7 +42,7 @@
     ],
     "oncrit_buffs": [
       {
-        "id": "buff_centipede_oncrit",
+        "id": "buff_centipede_oncrit_a",
         "name": "지네의 맹독",
         "description": "지네의 맹독은 적을 끔찍하게 불태웁니다.\n\n피해 +15%\n2턴 간 지속",
         "skill_requirements": [ { "name": "melee", "level": 1 } ],
@@ -69,7 +69,7 @@
         ]
       }
     ],
-    "techniques": [ "tec_centipede_rapid", "tec_centipede_break", "tec_centipede_bite", "tec_centipede_disarm", "centi_vorpal" ],
+    "techniques": [ "tec_centipede_rapid_a", "tec_centipede_break_a", "tec_centipede_bite_a", "tec_centipede_disarm_a", "centi_vorpal" ],
     "weapon_category": [ "KNIVES", "SHORT_SWORDS", "SHIVS" ],
     "weapons": [
       "moonstone_fang",
@@ -78,7 +78,7 @@
   },
   {
     "type": "technique",
-    "id": "tec_centipede_break",
+    "id": "tec_centipede_break_a",
     "name": "Grab Break",
     "messages": [ "The %s tries to grab you, but you skitter free!", "The %s tries to grab <npcname>, but they skitter free!" ],
     "skill_requirements": [ { "name": "melee", "level": 3 } ],
@@ -88,7 +88,7 @@
   },
   {
     "type": "technique",
-    "id": "tec_centipede_rapid",
+    "id": "tec_centipede_rapid_a",
     "name": "지네의 공격",
     "messages": [ "You swiftly hit %s", "<npcname> swiftly hits %s" ],
     "melee_allowed": true,
@@ -101,7 +101,7 @@
   },
   {
     "type": "technique",
-    "id": "tec_centipede_bite",
+    "id": "tec_centipede_bite_a",
     "name": "지네의 이빨",
     "messages": [ "지네의 이빨로 %s(을)를 공격합니다", "<npcname>(이)가 지네의 이빨로 %s(을)를 공격합니다" ],
     "skill_requirements": [ { "name": "melee", "level": 2 } ],
@@ -112,7 +112,7 @@
   },
   {
     "type": "technique",
-    "id": "tec_centipede_disarm",
+    "id": "tec_centipede_disarm_a",
     "name": "Disarm",
     "messages": [ "You disarm %s with lightning speed", "<npcname> disarms %s with lightning speed" ],
     "skill_requirements": [ { "name": "melee", "level": 4 } ],
