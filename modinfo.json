@@ -145,7 +145,7 @@
     "skill_requirements": [ { "name": "stabbing", "level": 7 } ],
     "weighting": -5,
     "downed_target": true,
-    "stunnedýtarget": true,
+    "stunned_target": true,
     "messages": [
       "푹 ! !  %s의 급소에 칼날을 깊게 박아넣습니다.",
       "푹 ! !  <npcname>(이)가 %s의 급소에 칼날을 깊게 박아넣습니다."
