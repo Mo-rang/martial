@@ -26,7 +26,7 @@
         "flat_bonuses": [
           { "stat": "damage", "type": "stab", "scaling-stat": "dex", "scale": 0.75 },
           { "stat": "arpen", "type": "stab", "scaling-stat": "dex", "scale": 0.75 },
-          { "stat": "dodge", "type": "stab", "scaling-stat": "dex", "scale": 0.25 }
+          { "stat": "dodge", "scaling-stat": "dex", "scale": 0.25 }
         ]
       }
     ],
