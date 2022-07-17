@@ -116,7 +116,6 @@
     "type": "technique",
     "id": "tec_panthera_disarm",
     "name": "Disarm",
-    "melee_allowed": true,
     "messages": [ "You disarm %s with lightning speed", "<npcname> disarms %s with lightning speed" ],
     "skill_requirements": [ { "name": "melee", "level": 4 } ],
     "melee_allowed": true,
