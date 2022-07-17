@@ -21,13 +21,10 @@
       {
         "id": "buff_panthera_static",
         "name": "사냥꾼의 노련함",
-        "description": "민첩성의 25%만큼 관통 피해와 방어력 관통이 증가합니다.",
+        "description": "민첩성의 75%만큼 관통 피해가 증가합니다.",
         "melee_allowed": true,
         "flat_bonuses": [
-          { "stat": "damage", "type": "stab", "scaling-stat": "dex", "scale": 0.25 },
-          { "stat": "arpen", "type": "bash", "scaling-stat": "dex", "scale": 0.25 },
-          { "stat": "arpen", "type": "cut", "scaling-stat": "dex", "scale": 0.25 },
-          { "stat": "arpen", "type": "stab", "scaling-stat": "dex", "scale": 0.25 }
+          { "stat": "damage", "type": "stab", "scaling-stat": "dex", "scale": 0.75 }
         ]
       }
     ],
@@ -37,7 +34,6 @@
         "name": "눈표범의 분노",
         "description": "당신이 쉬지않고 적을 공격하면 할수록 당신의 손과 발이 빨라져 보이지 않게 됩니다.\n\n행동력 소모 -4\n4턴 간 지속.  5회 중첩",
         "skill_requirements": [ { "name": "melee", "level": 5 } ],
-        "melee_allowed": true,
         "buff_duration": 4,
         "max_stacks": 5,
         "flat_bonuses": [ { "stat": "movecost", "scale": -4.0 } ]
@@ -47,18 +43,18 @@
       {
         "id": "buff_panthera_oncrit",
         "name": "약자멸시",
-        "description": "약점을 드러낸 적에게 치명적인 피해를 입힙니다.\n\n피해 +15%, 관통피해 관통력 +5\n2턴 간 지속.  2회 중첩",
+        "description": "약점을 드러낸 적에게 치명적인 피해를 입힙니다.\n\n피해 +15%, 관통피해 관통력 +5\n4턴 간 지속.  4회 중첩",
         "skill_requirements": [ { "name": "melee", "level": 1 } ],
         "melee_allowed": true,
-        "buff_duration": 2,
-        "max_stacks": 2,
+        "buff_duration": 4,
+        "max_stacks": 4,
         "mult_bonuses": [
           { "stat": "damage", "type": "bash", "scale": 1.2 },
           { "stat": "damage", "type": "cut", "scale": 1.2 },
           { "stat": "damage", "type": "stab", "scale": 1.2 }
         ],
         "flat_bonuses": [
-          { "stat": "arpen", "type": "stab", "scale": 5.0 }
+          { "stat": "arpen", "type": "stab", "scale": 10.0 }
         ]
       }
     ],
@@ -66,8 +62,7 @@
       {
         "id": "buff_panthera_kill",
         "name": "포식",
-        "description": "적을 죽이고 나면 재정비할 시간을 얻습니다.\n민첩성의 25%만큼 회피 기술 증가, 회피 시도 +3 \n4턴간 지속 2회 중첩",
-        "melee_allowed": true,
+        "description": "적을 죽이고 나면 마음껏 날뛸 수 있습니다.\n민첩성의 25%만큼 회피 기술 증가, 회피 시도 +3 \n4턴간 지속 2회 중첩",
         "buff_duration": 4,
         "max_stacks": 2,
         "bonus_dodges": 3,
@@ -98,7 +93,7 @@
     "id": "tec_panthera_rapid",
     "name": "눈표범의 발톱",
     "messages": [ "You swiftly hit %s", "<npcname> swiftly hits %s" ],
-    "melee_allowed": true,
+    "crit_ok" : true,
     "mult_bonuses": [
       { "stat": "movecost", "scale": 0.5 },
       { "stat": "damage", "type": "bash", "scale": 0.66 },
@@ -112,7 +107,6 @@
     "name": "눈표범의 이빨",
     "messages": [ "%s(을)를 공격해 쓰러뜨립니다", "<npcname>(이)가 %s(을)를 공격해 쓰러뜨립니다" ],
     "skill_requirements": [ { "name": "melee", "level": 2 } ],
-    "melee_allowed": true,
     "crit_tec": true,
     "down_dur": 1,
     "mult_bonuses": [ { "stat": "movecost", "scale": 0.5 } ]
@@ -130,7 +124,7 @@
     "type": "technique",
     "id": "tec_panthera_vorpal",
     "name": "숨통 끊기",
-    "melee_allowed": true,
+    "downed_target": true,
     "mult_bonuses": [ { "stat": "damage", "type": "stab", "scale": 5 } ],
     "crit_tec": true,
     "skill_requirements": [ { "name": "stabbing", "level": 7 } ],
@@ -139,7 +133,6 @@
       "푹 ! !  %s의 급소에 칼날을 깊게 박아넣습니다.",
       "푹 ! !  <npcname>(이)가 %s의 급소에 칼날을 깊게 박아넣습니다."
     ],
-    "downed_target": true,
     "description": "관통 피해가 5배, 치명타 시",
     "attack_vectors": [ "WEAPON" ]
   }
