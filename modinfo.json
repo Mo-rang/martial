@@ -34,6 +34,7 @@
         "name": "눈표범의 분노",
         "description": "당신이 쉬지않고 적을 공격하면 할수록 당신의 손과 발이 빨라져 보이지 않게 됩니다.\n\n행동력 소모 -4\n4턴 간 지속.  5회 중첩",
         "skill_requirements": [ { "name": "melee", "level": 5 } ],
+        "melee_allowed": true,
         "buff_duration": 4,
         "max_stacks": 5,
         "flat_bonuses": [ { "stat": "movecost", "scale": -4.0 } ]
@@ -43,18 +44,15 @@
       {
         "id": "buff_panthera_oncrit",
         "name": "약자멸시",
-        "description": "약점을 드러낸 적에게 치명적인 피해를 입힙니다.\n\n피해 +15%, 관통피해 관통력 +5\n4턴 간 지속.  4회 중첩",
+        "description": "약점을 드러낸 적에게 치명적인 피해를 입힙니다.\n\n피해 +15%, 관통피해 관통력 +5\n3턴 간 지속.  4회 중첩",
         "skill_requirements": [ { "name": "melee", "level": 1 } ],
         "melee_allowed": true,
-        "buff_duration": 4,
+        "buff_duration": 3,
         "max_stacks": 4,
         "mult_bonuses": [
           { "stat": "damage", "type": "bash", "scale": 1.2 },
           { "stat": "damage", "type": "cut", "scale": 1.2 },
           { "stat": "damage", "type": "stab", "scale": 1.2 }
-        ],
-        "flat_bonuses": [
-          { "stat": "arpen", "type": "stab", "scale": 10.0 }
         ]
       }
     ],
@@ -94,7 +92,7 @@
     "name": "눈표범의 발톱",
     "messages": [ "You swiftly hit %s", "<npcname> swiftly hits %s" ],
     "weighting": 1,
-    "crit_ok" : true,
+    "melee_allowed": true,
     "mult_bonuses": [
       { "stat": "movecost", "scale": 0.5 },
       { "stat": "damage", "type": "bash", "scale": 0.66 },
@@ -106,6 +104,7 @@
     "type": "technique",
     "id": "tec_panthera_bite",
     "name": "눈표범의 이빨",
+    "melee_allowed": true,
     "messages": [ "%s(을)를 공격해 쓰러뜨립니다", "<npcname>(이)가 %s(을)를 공격해 쓰러뜨립니다" ],
     "skill_requirements": [ { "name": "melee", "level": 2 } ],
     "crit_tec": true,
@@ -117,6 +116,7 @@
     "type": "technique",
     "id": "tec_panthera_disarm",
     "name": "Disarm",
+    "melee_allowed": true,
     "messages": [ "You disarm %s with lightning speed", "<npcname> disarms %s with lightning speed" ],
     "skill_requirements": [ { "name": "melee", "level": 4 } ],
     "melee_allowed": true,
@@ -126,6 +126,7 @@
     "type": "technique",
     "id": "tec_panthera_vorpal",
     "name": "숨통 끊기",
+    "melee_allowed": true,
     "mult_bonuses": [ { "stat": "damage", "type": "stab", "scale": 5 } ],
     "crit_tec": true,
     "skill_requirements": [ { "name": "stabbing", "level": 7 } ],
