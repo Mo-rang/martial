@@ -119,7 +119,7 @@
     "melee_allowed": true,
     "messages": [ "%s(을)를 공격해 쓰러뜨립니다", "<npcname>(이)가 %s(을)를 공격해 쓰러뜨립니다" ],
     "skill_requirements": [ { "name": "melee", "level": 2 } ],
-    "crit_ok": true,
+    "crit_tec": true,
     "weighting": 1,
     "down_dur": 2,
     "mult_bonuses": [ { "stat": "movecost", "scale": 0.5 } ],
@@ -145,7 +145,6 @@
     "skill_requirements": [ { "name": "stabbing", "level": 7 } ],
     "weighting": -3,
     "downed_target": true,
-    "stunned_target": true,
     "messages": [
       "푹 ! !  %s의 급소에 칼날을 깊게 박아넣습니다.",
       "푹 ! !  <npcname>(이)가 %s의 급소에 칼날을 깊게 박아넣습니다."
