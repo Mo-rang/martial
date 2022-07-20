@@ -160,7 +160,7 @@
       { "stat": "damage", "type": "cut", "scale": 0.33 },
       { "stat": "damage", "type": "stab", "scale": 0.33 }
     ],
-    "flat_bonuses": [ { "stat": "damage", "type": "cold", "scale": 15.0 } ],
+    "flat_bonuses": [ { "stat": "damage", "type": "cold", "scale": 15.0 } ]
   },
   {
     "type": "technique",
