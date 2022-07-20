@@ -137,6 +137,25 @@
   },
   {
     "type": "technique",
+    "id": "tec_panthera_back",
+    "name": "승자의 포효",
+    "messages": [ "힘을 분출하여 %s(와)과 주위의 적들을 공격합니다", "<npcname>(이)가 힘을 분출하여 %s(와)과 주위의 적들을 공격합니다" ],
+    "melee_allowed": true,
+    "required_buffs_all": [ "buff_panthera_kill" ],
+    "aoe": "spin",
+    "crit_tec": true,
+    "skill_requirements": [ { "name": "magic", "level": 7 }, { "name": "melee", "level": 10 } ],
+    "mult_bonuses": [
+      { "stat": "movecost", "scale": 1.8 },
+      { "stat": "damage", "type": "bash", "scale": 0.33 },
+      { "stat": "damage", "type": "cut", "scale": 0.33 },
+      { "stat": "damage", "type": "stab", "scale": 0.33 }
+    ],
+    "flat_bonuses": [ { "stat": "damage", "type": "cold", "scale": 15.0 } ],
+    "attack_vectors": [ "WEAPON" ] 
+  },
+  {
+    "type": "technique",
     "id": "tec_panthera_vorpal",
     "name": "숨통 끊기",
     "melee_allowed": true,
