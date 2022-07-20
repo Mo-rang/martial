@@ -150,6 +150,7 @@
     "melee_allowed": true,
     "required_buffs_all": [ "buff_panthera_kill2" ],
     "aoe": "spin",
+    "crit_tec": true,
     "knockback_dist": 2,
     "knockback_spread": 1,
     "down_dur": 2,
