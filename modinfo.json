@@ -71,9 +71,16 @@
         "flat_bonuses": [
           { "stat": "dodge", "scaling-stat": "dex", "scale": 0.25 }
         ]
-      }
+      },
+      {
+        "id": "buff_panthera_kill2",
+        "name": "승리",
+        "description": "적과의 전투에서 승리했습니다.",
+        "buff_duration": 1
+        "melee_allowed": true,
+        "skill_requirements": [ { "name": "magic", "level": 7 }, { "name": "melee", "level": 10 } ]
     ],
-    "techniques": [ "tec_panthera_rapid", "tec_panthera_break", "tec_panthera_bite", "tec_panthera_disarm", "tec_panthera_vorpal" ],
+    "techniques": [ "tec_panthera_rapid", "tec_panthera_break", "tec_panthera_bite", "tec_panthera_disarm", "tec_panthera_vorpal", "tec_panthera_back" ],
     "weapon_category": [ "KNIVES", "SHORT_SWORDS", "SHIVS" ],
     "weapons": [
       "moonstone_fang",
@@ -133,6 +140,27 @@
     "skill_requirements": [ { "name": "melee", "level": 4 } ],
     "melee_allowed": true,
     "disarms": true
+  },
+  {
+    "type": "technique",
+    "id": "tec_panthera_back",
+    "name": "승자의 포효",
+    "messages": [ "힘을 분출하여 %s(와)과 주변의 적들을 밀쳐냅니다", "<npcname>(이)가 힘을 분출하여 %s(와)과 주변의 적들을 밀쳐냅니다" ],
+    "skill_requirements": [ { "name": "melee", "level": 4 } ],
+    "melee_allowed": true,
+    "required_buffs_all": [ "buff_panthera_kill2" ],
+    "aoe": "spin"
+    "knockback_dist": 2,
+    "knockback_spread": 1,
+    "down_dur": 2,
+    "skill_requirements": [ { "name": "magic", "level": 7 }, { "name": "melee", "level": 10 } ],
+    "mult_bonuses": [
+      { "stat": "movecost", "scale": 1.8 },
+      { "stat": "damage", "type": "bash", "scale": 0.33 },
+      { "stat": "damage", "type": "cut", "scale": 0.33 },
+      { "stat": "damage", "type": "stab", "scale": 0.33 }
+    ],
+    "flat_bonuses": [ { "stat": "damage", "type": "cold", "scale": 15.0 } ],
   },
   {
     "type": "technique",
