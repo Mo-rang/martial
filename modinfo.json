@@ -73,7 +73,7 @@
         ]
       }
     ],
-    "techniques": [ "tec_panthera_rapid", "tec_panthera_break", "tec_panthera_bite", "tec_panthera_disarm", "tec_panthera_vorpal" ],
+    "techniques": [ "tec_panthera_rapid", "tec_panthera_break", "tec_panthera_bite", "tec_panthera_disarm", "tec_panthera_vorpal", "tec_panthera_back" ],
     "weapon_category": [ "KNIVES", "SHORT_SWORDS", "SHIVS" ],
     "weapons": [
       "moonstone_fang",
